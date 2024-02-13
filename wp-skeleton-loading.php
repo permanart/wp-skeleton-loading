@@ -15,13 +15,25 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
- function wp_skeleton_loading_style() {
-    wp_enqueue_style( plugin_dir_url( __FILE__ ) . 'assets/s-style.css', false );
-}
+//  function wp_skeleton_loading_styles() {
+//     wp_enqueue_style( plugin_dir_url( __FILE__ ) . 'assets/s-style.css', false );
+// }
 
-function wp_skeleton_loading_js() {
-    wp_enqueue_script( plugin_dir_url( __FILE__ ) . 'assets/skeleton.js', false );
-}
+// function wp_skeleton_loading_jss() {
+//     wp_enqueue_script( plugin_dir_url( __FILE__ ) . 'assets/skeleton.js', false );
+// }
 
-add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_style' );
-add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_js' );
+// add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_style' );
+// add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_jss' );
+
+function wp_skeleton_loading_style()
+{   
+    wp_enqueue_script( 'wp_skeleton_style', plugin_dir_url( __FILE__ ) . 'assets/s-style.css', array('jquery'), '0.0.1', false );
+}
+add_action('admin_enqueue_scripts', 'wp_skeleton_loading_style');
+
+function wp_skeleton_loading_js()
+{   
+    wp_enqueue_script( 'wp_skeleton_js', plugin_dir_url( __FILE__ ) . 'assets/skeleton.js', array('jquery'), '0.0.1', false );
+}
+add_action('admin_enqueue_scripts', 'wp_skeleton_loading_js');
