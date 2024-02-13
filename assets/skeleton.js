@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".wp-skeleton-loading").forEach(function(element) {
       element.classList.add("show-skeleton");
       setTimeout(function() {
-        element.classList.remove("skeleton-loading-tren");
+        element.classList.remove("wp-skeleton-loading");
       }, 50);
     });
     window.addEventListener("load", function() {
