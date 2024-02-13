@@ -15,9 +15,13 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
- function wp_skeleton_loading_assets() {
+ function wp_skeleton_loading_style() {
     wp_enqueue_style( plugin_dir_url( __FILE__ ) . 'assets/s-style.css', false );
+}
+
+function wp_skeleton_loading_js() {
     wp_enqueue_script( plugin_dir_url( __FILE__ ) . 'assets/skeleton.js', false );
 }
 
-add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_assets' );
+add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_style' );
+add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_js' );
