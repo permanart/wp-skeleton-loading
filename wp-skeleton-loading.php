@@ -1,3 +1,4 @@
+<?php
 /**
  * Plugin Name: Wordpress Skeleton Loading
  * Plugin URI: https://www.trentech.id
