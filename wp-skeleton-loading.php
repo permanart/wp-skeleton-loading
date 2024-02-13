@@ -20,7 +20,7 @@
 }
 
 function wp_skeleton_loading_js() {
-    wp_enqueue_script( WP_PLUGIN_DIR .'/wp-content/plugins/wp-skeleton-loading/assets', 'skeleton.js', false );
+    wp_enqueue_script( '/wp-content/plugins/wp-skeleton-loading/assets', 'skeleton.js', false );
 }
 
 add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_style' );
