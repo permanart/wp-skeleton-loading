@@ -1,0 +1,59 @@
+/* Skeleton loading start by trentech.id */
+.wp-skeleton-loading {
+    position: relative;
+  }
+
+  .wp-skeleton-loading:before, .wp-skeleton-loadingn:after {
+    content: "";
+    background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-size: 800px 104px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    animation: animate 1.5s linear infinite;
+  }
+
+  .wp-skeleton-loading img {
+    visibility: hidden;
+  }
+
+  .wp-skeleton-loading h1,
+  .wp-skeleton-loading h2,
+  .wp-skeleton-loading h3,
+  .wp-skeleton-loading h4,
+  .wp-skeleton-loading h5,
+  .wp-skeleton-loading h6,
+  .wp-skeleton-loading p {
+    opacity: 0;
+  }
+
+  .show-skeleton img {
+    visibility: visible;
+  }
+
+  .show-skeleton h1,
+  .show-skeleton h2,
+  .show-skeleton h3,
+  .show-skeleton h4,
+  .show-skeleton h5,
+  .show-skeleton h6,
+  .show-skeleton p {
+    opacity: 1;
+  }
+
+  button.wp-skeleton-loading {
+    border: 0px;
+  }
+
+  @keyframes animate {
+    0% {
+      background-position: -468px 0;
+    }
+    100% {
+      background-position: 130px 0;
+    }
+  }
+ /* Skeleton loading end by trentech.id */
