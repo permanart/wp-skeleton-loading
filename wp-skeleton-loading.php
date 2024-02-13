@@ -15,21 +15,21 @@
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
-//  function wp_skeleton_loading_styles() {
-//     wp_enqueue_style( plugin_dir_url( __FILE__ ) . 'assets/s-style.css', false );
-// }
+ function wp_skeleton_loading_styles() {
+    wp_enqueue_style( plugin_dir_url( __FILE__ ) . 'assets/s-style.css', false );
+}
 
 // function wp_skeleton_loading_jss() {
 //     wp_enqueue_script( plugin_dir_url( __FILE__ ) . 'assets/skeleton.js', false );
 // }
 
-// add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_style' );
+add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_styles' );
 // add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_jss' );
 
-function wp_skeleton_loading_styles() {
+function wp_skeleton_loading_style() {
     $plugin_url = plugin_dir_url( __FILE__ );
 
 wp_enqueue_style( 'style',  $plugin_url . "/assets/s-style.css");
 }
 
-add_action( 'admin_print_styles', 'wp_skeleton_loading_styles' );
+add_action( 'admin_print_styles', 'wp_skeleton_loading_style' );
