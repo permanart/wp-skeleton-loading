@@ -16,11 +16,11 @@
  */
 
  function wp_skeleton_loading_style() {
-    wp_enqueue_style( 'assets', 's-style.css', false );
+    wp_enqueue_style( WP_PLUGIN_DIR .'/wp-skeleton-loading/assets', 's-style.css', false );
 }
 
 function wp_skeleton_loading_js() {
-    wp_enqueue_script( 'assets', 'skeleton.js', false );
+    wp_enqueue_script( WP_PLUGIN_DIR .'/wp-skeleton-loading/assets', 'skeleton.js', false );
 }
 
 add_action( 'wp_enqueue_scripts', 'wp_skeleton_loading_style' );
